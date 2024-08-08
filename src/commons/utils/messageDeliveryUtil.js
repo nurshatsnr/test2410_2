@@ -4,8 +4,8 @@ import { log } from './logger';
 import * as sdk from 'aws-sdk';
 
 
-const accountSid = "AC627eb74ed910d02c34af1d23fb21dfc0";//process.env.TWILIO_ACCOUNT_SID;
-const authToken = "80443f149af1b4089dcde7350b3a870d";//process.env.TWILIO_AUTH_TOKEN;
+const accountSid = "";
+const authToken = "";
 let clientOptions = { logLevel: 'debug' };
 const sns = new sdk.SNS({ apiVersion: '2010-03-31', region: 'us-east-1' });
 const client = require('twilio')(accountSid, authToken,clientOptions);
