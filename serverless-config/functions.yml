@@ -1,0 +1,32 @@
+sampleLambda:
+  handler: src/handler/moduleName/apiName/SampleHandlerMgmt.sampleLambda
+  events:
+    - http:
+        path: sample-post-request
+        method: POST
+        cors:
+          origin: "*"
+          headers:
+            - Content-Type
+            - Authorization
+            - X-Api-Key
+            - _X_AMZN_TRACE_ID
+            - trackingId
+            - accesstoken 
+        bodyType: "TestRequest"   
+
+checkStatusLambda:
+  handler: src/handler/moduleName/apiName/SampleHandlerMgmt.checkStatusLambda
+  events:
+    - http:
+        path: sample-get-request
+        method: GET
+        cors:
+          origin: "*"
+          headers:
+            - Content-Type
+            - Authorization
+            - X-Api-Key
+            - _X_AMZN_TRACE_ID
+            - trackingId
+            - accesstoken 
