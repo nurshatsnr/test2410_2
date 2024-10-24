@@ -30,3 +30,21 @@ checkStatusLambda:
             - _X_AMZN_TRACE_ID
             - trackingId
             - accesstoken 
+
+#671a39ff12a059e061afb863_START
+createOrderLambda:
+  handler: src/handler/orders/createOrder.createOrderLambda
+  events:
+    - http:
+        path: orders
+        method: POST
+        cors:
+          origin: "*"
+          headers:
+            - Content-Type
+            - Authorization
+            - X-Api-Key
+            - X-Amz-Date
+            - X-Amz-Security-Token
+            - X-Amz-User-Agent
+#671a39ff12a059e061afb863_END
