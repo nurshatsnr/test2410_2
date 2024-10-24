@@ -30,3 +30,20 @@ checkStatusLambda:
             - _X_AMZN_TRACE_ID
             - trackingId
             - accesstoken 
+
+#671a39ff12a059e061afb85f_START
+createUserLambda:
+  handler: src/handler/user/UserHandlerMgmt.createUser
+  events:
+    - http:
+        path: user/create
+        method: POST
+        cors:
+          origin: "*"
+          headers:
+            - Content-Type
+            - Authorization
+            - X-Api-Key
+            - _X_AMZN_TRACE_ID
+            - accesstoken
+#671a39ff12a059e061afb85f_END
